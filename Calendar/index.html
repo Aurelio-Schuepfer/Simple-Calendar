@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Calendar</h1>
+
+      <div class="search-bar">
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Search..." />
+      </div>
+      
+      <div class="calendar-top-bar">
+        <button id="open-event-form" class="open-event-btn">Add Event</button>
+    </div>
+
+    <button id="modeToggle" class="mode-toggle">Switch Theme</button>
+    
+        <div id="month-nav">
+          <button id="prev-month">←</button>
+          <span id="month-name"></span>
+          <span id="year"></span>
+          <button id="next-month">→</button>
+        </div>
+
+        <div id="calendar-weekdays" class="calendar-weekdays">
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+            <div>Sun</div>
+        </div>  
+
+        <div class="calendar">
+            <div id="calendar-body" class="calendar-body"></div>
+        </div>
+      </div>
+      
+      <div id="event-modal" class="event-modal hidden">
+        <div class="event-modal-content">
+            <h2 class="add-event-title">Add Event</h2>
+            <input type="date" id="event-date" class="event-input" placeholder="Click a day to select date...">
+            <input type="text" id="event-text" class="event-input" placeholder="Enter your event...">
+            <div id="feedback-message" class="feedback-message hidden"></div>
+            <button id="add-event-btn" class="add-event-btn">Add Event</button>
+            <button id="close-event-form" class="close-event-btn">Close</button>
+        </div>
+    </div>
+    </div>
+
+    <script src="src/script.js" defer></script>
+  </body>
+</html>
